@@ -57,5 +57,5 @@ func TestGrpc(t *testing.T) {
 	tt.Assert(err != nil)
 	tt.Assert(errors.Is(err, ErrInternal))
 	tt.Assert(errors.As(err, new(*customerr.WithCustom)))
-	tt.Assert(customerr.GetCustomStr(err, "not thing") == "123123")
+	tt.Assert(customerr.GetCustomStr(err, "not thing") == "wrap with custom")
 }
